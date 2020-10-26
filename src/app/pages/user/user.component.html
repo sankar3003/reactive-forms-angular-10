@@ -1,0 +1,19 @@
+<form [formGroup]="userForm">
+  <input type="text" formControlName="name" required>
+  <div *ngIf="userForm.get('name').errors">required</div>
+  <div formGroupName="address">
+    <input type="text" formControlName="city" placeholder="City">
+    <input type="text" formControlName="pincode" placeholder="Pincode">
+  </div>
+  <button (click)="addNum()">Add Num</button>
+  <div formArrayName="numbers"  >
+    <div *ngFor="let r of number; let i= index" [formGroupName]="i">
+      {{i+1}}
+    <input type="text" placeholder="Number" formControlName="label">
+    <input type="number" placeholder="Number" formControlName="num2"><button (click)="remove(i)">Remove</button>
+  </div></div>
+  <button (click)="patch()">Patch</button>
+</form>
+
+{{userForm.value | json}}
+

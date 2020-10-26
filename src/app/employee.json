@@ -1,0 +1,29 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "first_name": "Sebastian",
+      "last_name": "Eschweiler",
+
+      "address":[{
+        "city":"cbe",
+        "pincode":6410014
+      }]
+      },
+      {
+        "id": 2,
+        "first_name": "Sankar",
+        "last_name": "N",
+
+        "address":[{
+          "city":"Erode",
+          "pincode":638551
+        },{
+          "city":"Cbe",
+          "pincode":641110
+        }
+      ]
+        }
+
+  ]
+}
